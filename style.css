@@ -17,14 +17,32 @@ h2 {
   flex-direction: row;
 }
 
+.lesson {
+  display: flex;
+  flex-direction: row;
+}
 #l11 {
   flex: 1;
   box-shadow: 1px 2px 2px 2px rgb(0 0 0 / 50%);
   padding: 10px;
   margin: 5px;
 }
+.left {
+  flex: 1;
+  box-shadow: 1px 2px 2px 2px rgb(0 0 0 / 50%);
+  padding: 10px;
+  margin: 5px;
+}
 
-#l12 {
+/* #l12 {
+  flex: 1;
+  box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%), 0 0 0 2px white,
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
+  padding: 10px;
+  margin: 5px;
+} */
+
+.right {
   flex: 1;
   box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%), 0 0 0 2px white,
     0.3em 0.3em 1em rgb(200 0 0 / 60%);
