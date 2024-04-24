@@ -14,7 +14,12 @@
     "exercises": [
       {
         "instruction": "Assign the value 7 to variable a.",
-        "hint": "Hint! Variable 'a' should have a value of 7."
+        "hint": "Hint! Variable 'a' should have a value of 7.",
+        "placeholder": [
+          "// Setup",
+          " var a;",
+          " // Only change code above this line"
+        ]
       }
     ]
   }

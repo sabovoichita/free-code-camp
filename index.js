@@ -22,12 +22,12 @@ function showLesson(lessonNumber, lesson) {
           <p>${exercise.instruction}</p>
           <details>
             <summary>Answer</summary>
-            <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="Write your answer here"></textarea>
+            <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder}"></textarea>
             <p>${exercise.hint}</p>
           </details>
         `
           )
-          .join("")}
+          .join("/t")}
       </div>
     </div>`;
 
@@ -46,7 +46,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 6;
+  const numberOfLessons = 7;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
