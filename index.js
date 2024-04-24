@@ -5,7 +5,6 @@ function $(selector) {
 function showLesson(lessonNumber, lesson) {
   const spaceRender = $(`#l${lessonNumber}`);
 
-  // Extracting properties from the lesson object
   const { title, content, eTitle, exercises } = lesson;
 
   // Rendering the lesson content
@@ -47,7 +46,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 3;
+  const numberOfLessons = 4;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
