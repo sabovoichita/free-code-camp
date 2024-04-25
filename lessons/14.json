@@ -12,7 +12,7 @@
     "exercises": [
       {
         "instruction": "Change the 0 so that the quotient is equal to 2.",
-        "placeholder": ["const product = 8 * 0;"]
+        "placeholder": ["const quotient = 66 / 0;"]
       }
     ],
     "hint": [
