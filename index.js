@@ -27,7 +27,7 @@ function showLesson(lessonNumber, lesson) {
           </details>
         `
           )
-          .join("/t")}
+          .join("/n")}
       </div>
     </div>`;
 
@@ -46,7 +46,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 7;
+  const numberOfLessons = 8;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
