@@ -24,7 +24,8 @@
       }
     ],
     "hint": [
-      "Hint! a should be defined and have a final value of 6.",
+      "Hint!",
+      "a should be defined and have a final value of 6.",
       "b should be defined and have a final value of 15.",
       "c should not contain undefined and should have a final value of the string I am a String!"
     ]

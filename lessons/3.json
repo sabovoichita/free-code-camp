@@ -21,6 +21,6 @@
         ]
       }
     ],
-    "hint": "Hint! Variable 'a' should have a value of 7."
+    "hint": ["Hint!", " Variable 'a' should have a value of 7."]
   }
 ]

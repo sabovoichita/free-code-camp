@@ -17,6 +17,6 @@
         "placeholder": ["const sum = 10 + 0;"]
       }
     ],
-    "hint": ["Hint! sum should equal 20.", " You should use the + operator."]
+    "hint": ["Hint!", "sum should equal 20.", " You should use the + operator."]
   }
 ]

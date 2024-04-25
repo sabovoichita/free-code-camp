@@ -16,7 +16,8 @@
       }
     ],
     "hint": [
-      "Hint! myFirstName should be a string with at least one character in it.",
+      "Hint!",
+      " myFirstName should be a string with at least one character in it.",
       "myLastName should be a string with at least one character in it."
     ]
   }

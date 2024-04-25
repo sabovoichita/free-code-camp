@@ -24,7 +24,8 @@
       }
     ],
     "hint": [
-      "Hint! var should not exist in the code.",
+      "Hint!",
+      "var should not exist in the code.",
       "catName should be the string Oliver.",
       "atSound should be the string Meow!"
     ]

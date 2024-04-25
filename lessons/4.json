@@ -25,7 +25,8 @@
       }
     ],
     "hint": [
-      "Hint! a should be assigned to b with =.",
+      "Hint!",
+      " a should be assigned to b with =.",
       " b should have a value of 7."
     ]
   }

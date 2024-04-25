@@ -29,7 +29,8 @@
       }
     ],
     "hint": [
-      "Hint! Do not create any new variables.",
+      "Hint!",
+      "Do not create any new variables.",
       "studlyCapVar should be defined and have a value of 10.",
       "properCamelCase should be defined and have a value of the string A String.",
       "titleCaseOver should be defined and have a value of 9000.",
