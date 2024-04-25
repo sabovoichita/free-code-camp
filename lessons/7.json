@@ -10,11 +10,7 @@
     "exercises": [
       {
         "instruction": "Initialize the three variables a, b, and c with 5, 10, and 'I am a' respectively so that they will not be undefined.",
-        "hint": [
-          "Hint! a should be defined and have a final value of 6.",
-          "b should be defined and have a final value of 15.",
-          "c should not contain undefined and should have a final value of the string I am a String!"
-        ],
+
         "placeholder": [
           "// Only change code below this line",
           " var a;",
@@ -26,6 +22,11 @@
           " c = c + ' String!';"
         ]
       }
+    ],
+    "hint": [
+      "Hint! a should be defined and have a final value of 6.",
+      "b should be defined and have a final value of 15.",
+      "c should not contain undefined and should have a final value of the string I am a String!"
     ]
   }
 ]

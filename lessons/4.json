@@ -14,10 +14,6 @@
     "exercises": [
       {
         "instruction": "Assign the contents of a to variable b.",
-        "hint": [
-          "Hint! a should be assigned to b with =.",
-          " b should have a value of 7."
-        ],
         "placeholder": [
           "// Setup",
           " var a;",
@@ -27,6 +23,10 @@
           " // Only change code above this line"
         ]
       }
+    ],
+    "hint": [
+      "Hint! a should be assigned to b with =.",
+      " b should have a value of 7."
     ]
   }
 ]

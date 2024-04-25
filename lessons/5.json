@@ -9,9 +9,9 @@
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": "Define a variable a with var and initialize it to a value of 9.",
-        "hint": "Hint! You should initialize a to a value of 9."
+        "instruction": "Define a variable a with var and initialize it to a value of 9."
       }
-    ]
+    ],
+    "hint": "Hint! You should initialize a to a value of 9."
   }
 ]

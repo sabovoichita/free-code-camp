@@ -15,15 +15,7 @@
     "exercises": [
       {
         "instruction": "Modify the existing declarations and assignments so their names use camelCase.",
-        "hint": [
-          "Hint! Do not create any new variables.",
-          "studlyCapVar should be defined and have a value of 10.",
-          "properCamelCase should be defined and have a value of the string A String.",
-          "titleCaseOver should be defined and have a value of 9000.",
-          "studlyCapVar should use camelCase in both declaration and assignment sections.",
-          "properCamelCase should use camelCase in both declaration and assignment sections.",
-          "titleCaseOver should use camelCase in both declaration and assignment sections."
-        ],
+
         "placeholder": [
           "// Variable declarations",
           " var StUdLyCapVaR;",
@@ -35,6 +27,15 @@
           " tITLEcASEoVER = 9000;;"
         ]
       }
+    ],
+    "hint": [
+      "Hint! Do not create any new variables.",
+      "studlyCapVar should be defined and have a value of 10.",
+      "properCamelCase should be defined and have a value of the string A String.",
+      "titleCaseOver should be defined and have a value of 9000.",
+      "studlyCapVar should use camelCase in both declaration and assignment sections.",
+      "properCamelCase should use camelCase in both declaration and assignment sections.",
+      "titleCaseOver should use camelCase in both declaration and assignment sections."
     ]
   }
 ]

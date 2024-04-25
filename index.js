@@ -5,14 +5,14 @@ function $(selector) {
 function showLesson(lessonNumber, lesson) {
   const spaceRender = $(`#l${lessonNumber}`);
 
-  const { title, content, eTitle, exercises } = lesson;
+  const { title, content, eTitle, exercises, hint } = lesson;
 
   // Rendering the lesson content
   const lessonHTML = `
     <div class="lesson">
       <div class="left">
         <h2>${lessonNumber}. ${title}</h2>
-        ${content.map((contentItem) => `<p>${contentItem}</p>`).join("")}
+        ${content.map((contentItem) => `<p>${contentItem}</p>`).join(" ")}
       </div>
       <div class="right">
         <h3>${eTitle}</h3>
@@ -23,11 +23,11 @@ function showLesson(lessonNumber, lesson) {
           <details>
             <summary>Answer</summary>
             <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder}"></textarea>
-            <p>${exercise.hint}</p>
           </details>
         `
           )
-          .join("/n")}
+          .join(";")}
+          ${hint.map((h) => `<p>${h}</p>`).join(" ")}
       </div>
     </div>`;
 
@@ -46,7 +46,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 12;
+  const numberOfLessons = 13;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }

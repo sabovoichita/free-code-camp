@@ -13,12 +13,10 @@
     "exercises": [
       {
         "instruction": "Change the 0 so that sum will equal 20.",
-        "hint": [
-          "Hint! sum should equal 20.",
-          " You should use the + operator."
-        ],
+
         "placeholder": ["const sum = 10 + 0;"]
       }
-    ]
+    ],
+    "hint": ["Hint! sum should equal 20.", " You should use the + operator."]
   }
 ]

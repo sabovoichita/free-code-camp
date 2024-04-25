@@ -20,9 +20,9 @@
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": "Use the var keyword to create a variable called myName.",
-        "hint": "Hint! Look at the ourName example above if you get stuck."
+        "instruction": "Use the var keyword to create a variable called myName."
       }
-    ]
+    ],
+    "hint": "Hint! Look at the ourName example above if you get stuck."
   }
 ]

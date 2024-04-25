@@ -19,13 +19,14 @@
     "exercises": [
       {
         "instruction": "Update the code so it only uses the let keyword.",
-        "hint": [
-          "Hint! var should not exist in the code.",
-          "catName should be the string Oliver.",
-          "atSound should be the string Meow!"
-        ],
+
         "placeholder": ["var catName = 'Oliver';", " var catSound = 'Meow!'';"]
       }
+    ],
+    "hint": [
+      "Hint! var should not exist in the code.",
+      "catName should be the string Oliver.",
+      "atSound should be the string Meow!"
     ]
   }
 ]
