@@ -46,7 +46,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 19;
+  const numberOfLessons = 20;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
