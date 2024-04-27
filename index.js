@@ -22,11 +22,13 @@ function showLesson(lessonNumber, lesson) {
           <p>${exercise.instruction}</p>
           <details>
             <summary>Answer</summary>
-            <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder}"></textarea>
+            <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder
+              .map((h) => `<p>${h}</p> + </br>`)
+              .join(" ")}"></textarea>
           </details>
         `
           )
-          .join(";")}
+          .join(" ")}
           ${hint.map((h) => `<p>${h}</p>`).join(" ")}
       </div>
     </div>`;
@@ -46,7 +48,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 20;
+  const numberOfLessons = 21;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
