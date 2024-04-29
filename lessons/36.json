@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Use Bracket Notation to Find the Last Character in a String",
+    "content": [
+      "In order to get the last letter of a string, you can substract one from the strins's length.",
+      "For example, if const firstName = 'Ada', you can get the value of the last letter of the string by using firstName[firstName.length -1]",
+      "Example:",
+      "const firstName = 'Ada';",
+      "const lastLetter  = firstName[[firstName.length-1];",
+      "lastLetter would have a value of the string 'a'."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Use bracket notation to find the last character in the lastName variable.",
+        "placeholder": [
+          " //Setup ",
+          "let lastName= 'Lovelace';",
+          " ",
+          "//Only change code below this line ",
+          "const lastLetterOfLastName = lastName; // Change this line",
+          "//Only change code above this line"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Try looking at the example above if you get stuck.",
+      "The lastLetterOfLastName should have the value of e.",
+      "You should use  .lenght to get the last letter"
+    ]
+  }
+]
