@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Use Bracket Notation to Find the Nth Character in a String",
+    "content": [
+      "You can also use bracket notation to get the character at other positions within a string.",
+      "Remember that computers start counting at 0, so the first character is actually the zeroth character.",
+      "Example:",
+      "const first Name = 'Ada';",
+      "const secondLetterOfFirstName = firstName[1];",
+      "secondLetterOfFirstName would have a value of the string 'd'."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Let's try to set thirdLetterOfLastName to equal to third letter of lastName variable using bracket notation.",
+        "placeholder": [
+          " //Setup ",
+          "let lastName= 'Lovelace';",
+          " ",
+          "//Only change code below this line ",
+          "const thirdLetterOfLastName = lastName; // Change this line",
+          "//Only change code above this line"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Try looking at the example above if you get stuck.",
+      "The thirdLetterOfLastName variable should have the value of V.",
+      "You should use bracket notation."
+    ]
+  }
+]
