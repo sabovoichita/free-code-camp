@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Find the length of a String",
+    "content": [
+      "You can find the length of a String value by writing '.length' after the string variable or string literal. ",
+      "console.log('Voichita Maria'.length)",
+      "The value 14 would be displayed in the console. Note that the space character between 'Voichita' and 'Maria' is also counted. ",
+      "For example, if we created the variable const firstName = 'Ada', we could find out how long the string Ada is by using the firstName.length property."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Use the '.length' property to set lastNameLength to the number of characters in lastName.",
+        "placeholder": [
+          " //Setup ",
+          "let lastNameLength = 0",
+          "const lastName = 'Lovelace'",
+          " ",
+          "//Only change code below this line ",
+          "lastNameLength= lastName;"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "You should not change the variable declarations in the //Setup section.",
+      "lastNameLength should be equal to 8.",
+      "You should be getting the length of lastName by using .length like this: 'lastName.length'"
+    ]
+  }
+]
