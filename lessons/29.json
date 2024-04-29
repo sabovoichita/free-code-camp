@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Concatenating Strings with Plus Equals Operator",
+    "content": [
+      "We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.",
+      "Note: Watch out for spaces. Concatenating does not add spaced between concatenated strings, so you will need to add them yourself.",
+      "Example:",
+      "let ourStr = ''I come first. ",
+      "ourStr += 'I come second.';",
+      "ourStr now has a value of the string 'I come first. I come second.'"
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Build 'myStr' over several lines by concatenating these two strings: 'This is the first sentence,' and 'This is the second sentence.'  using the += operator. Use the += operator similar to how it is shown in the example and be sure to include a space between the two strings. Starrt by assigning the first string to myStr, the add on the second string.",
+        "placeholder": ["let myStr;"]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "myStr should have a single space character between the two strings.",
+      "myStr should have a value of the string: This is the first sentence. This is the second sentence.",
+      "You should use the += operator to buid myStr"
+    ]
+  }
+]
