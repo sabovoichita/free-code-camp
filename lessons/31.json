@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Appending Variables to Strings",
+    "content": [
+      "Just as you can build a string over multiple lines out of strings literals, we can also append variables to a string using the plus equals(+=) operator.",
+      "Example:",
+      "const anAdjective = 'awesome!';",
+      "let ourStr = 'freeCodeCamp is ' ",
+      "ourStr+=anAdjective;",
+      "ourStr would have the value 'freeCodeCamp is awesome!'"
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator",
+        "placeholder": [
+          "//Only change code below this line",
+          "const someAdjective= '';",
+          "const myStr = 'Learning to code is ';"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "someAdjective should be set to a string at least 3 charcters long.",
+      "You should append someAdjective to myStr using the += operator."
+    ]
+  }
+]
