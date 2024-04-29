@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Use Bracket Notation to Find the Nth-to-Last Character in a String",
+    "content": [
+      "You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.",
+      "For example, you can get the value of the third-to-last letter of the const firstName = 'Augusta' string by using firstName[firstName.length - 3]",
+      "Example:",
+      "const firstName = 'Augusta';",
+      "const thirdToLastLetter  = firstName[[firstName.length-3];",
+      "thirdToLastLetter would have a value of the string 's'."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Use bracket notation to find the second-to-last character in the lastName string.",
+        "placeholder": [
+          " //Setup ",
+          "let lastName= 'Lovelace';",
+          " ",
+          "//Only change code below this line ",
+          "const secondToLastLetterOfLastName = lastName; // Change this line",
+          "//Only change code above this line"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Try looking at the example above if you get stuck.",
+      "The secondToLastLetterOfLastName should have the value of c.",
+      "You should use  .length to get the last letter"
+    ]
+  }
+]

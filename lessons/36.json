@@ -27,7 +27,7 @@
       "Hint! ",
       "Try looking at the example above if you get stuck.",
       "The lastLetterOfLastName should have the value of e.",
-      "You should use  .lenght to get the last letter"
+      "You should use  .length to get the last letter"
     ]
   }
 ]
