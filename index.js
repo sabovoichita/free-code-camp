@@ -1,8 +1,9 @@
 function $(selector) {
   return document.querySelector(selector);
 }
+
 function renderDivs(lessonNumber) {
-  const container = document.getElementById("container"); // Assuming you have a container div with id 'container' to hold all the divs
+  const container = document.getElementById("container");
   for (let i = 1; i <= lessonNumber; i++) {
     const div = document.createElement("div");
     div.id = `l${i}`;
@@ -10,13 +11,11 @@ function renderDivs(lessonNumber) {
   }
 }
 
-// Call the renderDivs function with the desired number of divs
 function showLesson(lessonNumber, lesson) {
   const spaceRender = $(`#l${lessonNumber}`);
 
   const { title, content, eTitle, exercises, hint } = lesson;
 
-  // Rendering the lesson content
   const lessonHTML = `
     <div class="lesson">
       <div class="left">
@@ -57,9 +56,9 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  renderDivs(39);
+  const numberOfLessons = 40;
+  renderDivs(numberOfLessons);
 
-  const numberOfLessons = 39;
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
