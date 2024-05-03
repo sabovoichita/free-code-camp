@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Shopping List",
+    "content": [
+      "Create a shopping list in the variable myList. The list should be a multi-dimentional array containing several sub-arrays.",
+      "The first element in each sub-array should contain a string with the name of the item. The second element should be a number representing the quantity i.e.",
+      "['Chocolate Bar', 15]",
+      "There should be at least 5 sub-arrays in the list.",
+      "ourArray.shift()",
+      "ourArray.unshift('Happy')",
+      "After the shift, ourArray would have the value ['J', 'cat']. After the unshift, ourArray would have the value ['Happy','J','cat'] ",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Add ['Paul', 35] to the beginning of the myArray variable using unshift().",
+        "placeholder": [
+          " //Setup ",
+          "const myList = [];",
+          " ",
+          "//Only change code below this line "
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "myList shoud be an array.",
+      "The first element in each of your sub-arrays should all be strings.",
+      "The second element in each of your sub-array should all be numbers.",
+      "You should have at least 5 items in your list."
+    ]
+  }
+]
