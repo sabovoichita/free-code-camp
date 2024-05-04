@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Write Reusable JavaScript with Functions",
+    "content": [
+      "In JavaScript, we can divide up our code into reusable parts called functions.",
+      "Here's an example of a function:",
+      "function functionName(){",
+      "     conole.log('Hello World');",
+      "}",
+      "You can call or invoke this function by using its name followed by parentheses, like this: functionName(); Each time the fucntion is called it will print out the message Hello World on the dev console. All the code between the curly braces will be executed every time the function is called.",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "1.Create a function called reusableFunction which prints the string 'Hi World' to the dev console. 2. Call the function",
+        "placeholder": [" "]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "reusableFunction should be a function.",
+      "If reusableFunction is called, it should output the string 'Hi World' to the condole. ",
+      "You should call reusableFunction once it is definded"
+    ]
+  }
+]
