@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Understanding Boolean Values",
+    "content": [
+      "Another data type is the Boolean. Booleans may only be one of two value: true and false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive.",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Modify the welcomeToBooleans function so that it returns true instead of false.",
+        "placeholder": [
+          "function welcomeToBooleans() {",
+          "// Only change code below this line",
+          "",
+          "return false",
+          "",
+          "// Only change code above this line",
+          "}",
+          ""
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Note:",
+      "Booleans values are never written with quotes. The strings 'true' and 'false' are not Boolean and have no meaning in JavaScript.",
+      "The welcomeToBooleans() function should return a Boolean(true or false) value. ",
+      "welcomeToBooleans() should return true"
+    ]
+  }
+]
