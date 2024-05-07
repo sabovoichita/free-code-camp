@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Comparison with the Strict Equality Operator",
+    "content": [
+      "Strict equality(===) is the counterpart to the equality operator(==). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.",
+      "If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.",
+      "Examples",
+      "3 === 3 // true",
+      "3 === '3' //false ",
+      "In the second example 3 is a Number type and '3' is a String type.",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Use the strict equality operator in the if statement so the function will return the strinf Equal when val is stgrictly equal to 7.",
+        "placeholder": [
+          "// Setup",
+          "function testEqual (val) {",
+          "if (val) { // Change  this line",
+          "return 'Equal'",
+          "}",
+          "return 'Not equal'",
+          "}",
+          "",
+          "testEqual(10)"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "testEqual(10) should return the string 'Not Equal'",
+      "testEqual(7) should return the string 'Equal'",
+      "testEqual('7') should return the string 'Not Equal'",
+      "You should use the === operator"
+    ]
+  }
+]
