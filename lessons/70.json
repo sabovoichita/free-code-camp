@@ -10,7 +10,7 @@
       "} ",
       "if num < 5 { ",
       "return 'No'",
-      " \t  }",
+      "  }",
       "",
       "return 'Yes';",
 
@@ -45,7 +45,7 @@
     "hint": [
       "Hint! ",
       "You should use the || operator once",
-      "You shouldonly have one if statement",
+      "You should only have one if statement",
       "testLogicalOr(0) should return the string 'Outside'",
       "testLogicalOr(9) should return the string 'Outside'",
       "testLogicalOr(10) should return the string 'Inside'",

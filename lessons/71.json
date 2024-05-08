@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Introducing Else Statements",
+    "content": [
+      "When a condition for an if statement is true, the block of code followinf it is executed, What about if the condition is false? Normally nothing would happen. With an else statement, an alternative block of code can be executed.",
+      "The ogical or operator is composed of two symbols(||).",
+      "if (num > 10) {",
+      "return 'Bigger than 10'; ",
+      "} else { ",
+      "return '10 or Less';",
+      " }",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Combine the if statements into a single if/else statement.",
+        "placeholder": [
+          "// Setup",
+          "function testElse(val) {",
+          "let result = ''",
+          "//Only change  code below this line",
+          "",
+          "if (val > 5) { ",
+          " result =  'Bigger than 5';",
+          " }",
+          "",
+          "if (val <= 5) { ",
+          " result =  '5 or Smaller';",
+          " }",
+          "",
+          "//Only change  code above this line",
+          "return result;",
+          "",
+          "testElse(4);"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "You should only have one if statement in the editor. ",
+      "You should use an else statement",
+      "testElse(4) should return the string '5 or Smaller'",
+      "testElse(5) should return the string '5 or Smaller'",
+      "testElse(6) should return the string 'Bigger than 5'",
+      "testElse(10) should return the string 'Bigger than 5'",
+      "You should not change the code above or below the specified comments"
+    ]
+  }
+]
