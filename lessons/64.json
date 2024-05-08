@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Comparison with the Strict Inequality Operator",
+    "content": [
+      "The strict inequality operator(!==) is the logical opposite of the strict equality operator. It means'Stricltly Not Equal' and returnd false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.",
+      "Examples",
+      "3 !== 3 // false ",
+      "3 !== '3' // true ",
+      "4 !== 3 // true "
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Add the strict inequality operator to the if statement sp the function will return the string NotEqual when val is not strictly equal to 17.",
+        "placeholder": [
+          "// Setup",
+          "function testStrictNotEqual (val) {",
+          "if (val) { // Change  this line",
+          " return 'Not Equal'",
+          " }",
+          "return 'Equal'",
+          "}",
+          "",
+          "testStrictNotEqual(10)"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "testStrictNotEqual(17) should return the string Equal",
+      "testStrictNotEqual('17') should return the string Not Equal",
+      "testStrictNotEqual(12) should return the string Not Equal",
+      "testStrictNotEqual('bob') should return the string Not Equal",
+      "You should use the !== operator"
+    ]
+  }
+]
