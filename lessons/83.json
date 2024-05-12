@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Build JavaScript Objects",
+    "content": [
+      "You may have heard of the term object before",
+      "Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what is called properties.",
+      "Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.",
+      "Here's a sample cat object:",
+      "const cat = {",
+      "'name' : 'Whiskers',",
+      "'legs' : 4,",
+      "'tails' : 1,",
+      "'enemies' : ['Water', 'Dogs']",
+      "};",
+      "",
+      "However, if your object has non-string properties, JavaSCript will automatically typecast them as strings."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Make an object that represents a dog called myDog which contains the properties name(a string), legs, tails and friends. You can set these object propeties to whatever values you want, as long as name is a string, legs and tails are numbers and friends is a array.",
+        "placeholder": [
+          "// Setup",
+          "const myDog {",
+          "// Only change code below this line",
+          "",
+
+          "// Only change code above this line",
+          "} ",
+          ""
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "myDog should contain the property name and it should be a string.",
+      "myDog should contain the property legs and it shoud be a number.",
+      "myDog should contain the property tails and it should be a number",
+      "myDog should contain the property friends and it should be an array.",
+      "myDog should only contain all the given properties",
+      "Cards Sequence 7, 8, 9 should return the string 0 Hold",
+      "Cards Sequence 10, J, Q, K, A should return the string -5 Hold",
+      "Cards Sequence 3, 7, Q, 8, A should return the string -1 Hold",
+      "Cards Sequence 2, J, 9, 2, 7 should return the string 1 Bet",
+      "Cards Sequence 2, 2, 10should return the string 1 Bet",
+      "Cards Sequence 3, 2, A, 10, K should return the string -1 Hold"
+    ]
+  }
+]
