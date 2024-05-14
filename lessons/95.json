@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Record Collection",
+    "content": [
+      "You are creating a function that aids in the maintainance of a musical album collection. The collection is organized as an object that contains multiple albums which are also objects. Each album is represented in the collection with a unique id as the property name. Within each album object, there are various properties describing information about the album. Not all albums have complete information.",
+      "The updateRecords function takes 4 arguments represented by the following function parameters:",
+      "",
+      "\b records - an object containing seceral individula albums",
+      "\b id - a number representing a specific album in the records object",
+      "\b prop - a string representing the name of the album's propery to update",
+      "\b value - a string comtaining the information used to update the album's property ",
+      "Complete the function using the rules below to modify the objects passed to the function.",
+      "\b Your function must always return the entire records object.",
+      "\b If value is an empty string, delete teh given prop property from the album.",
+      "\b If prop isn't tracks and value isn't empty string, but the album does't have a tracks property, create an empty array and add value to it.",
+      "\b If props is tracks and value isn't an ampty string, add value to the end of the album's existing tracks array.",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.",
+        "placeholder": [
+          "// Setup",
+          "",
+          "const recordCollection = {",
+          "2548: {",
+          "albumTitle: 'Slippery When Wet'",
+          "artist : 'Bon Jovi',",
+          "tracks : ['Let It Rock', 'You Give Love a Bad Name']",
+          "},",
+          "1468: {",
+          "albumTitle: '1999'",
+          "artist : 'Prince',",
+          "tracks : ['1999', 'Little Red Corvette']",
+          "},",
+          "1245: {",
+          "artist : 'Robert Palmer',",
+          "tracks : []",
+          "},",
+          "1245: {",
+          "albumTitle : ' ABBA Gold',",
+          "}",
+          "}",
+          "",
+          "// Only change code below this line",
+          "function updateRecords(records, id, prop, value) {",
+          "return records;",
+          "}",
+          "",
+          "updateRecords(recordCollection, 5439, 'artist', 'ABBA'"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Note:",
+      "A copy of the recordCollection object is used for the tests. You should not directly modify the recordCollection object.",
+      "After updateRecords(recordCollection, 5439, 'artist', 'ABBA'), artist should be the string ABBA",
+      "After updateRecords(recordCollection, 5439, 'tracks', 'Take a Chance on Me'), tracks should have the string 'Take a Chance on Me' as the last and only element",
+      "After updateRecords(recordCollection, 2548, 'tracks', 'artist', ''), artist should not be set",
+      "After updateRecords(recordCollection, 1245, 'tracks', 'Take a Chance on Me'), tracks should have the string 'Take a Chance on Me' as the last and only element",
+      "After updateRecords(recordCollection, 2468, 'tracks', 'Free'), tracks should have the string '1999' as the first element",
+      "After updateRecords(recordCollection, 2548, 'tracks', ''), tracks should not be set",
+      "After updateRecords(recordCollection, 1245, 'albumTitle', 'Riptide'), albumTitle should be the string 'Raptide'",
+      ""
+    ]
+  }
+]
