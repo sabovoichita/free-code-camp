@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Accessing Nested Arrays",
+    "content": [
+      "As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.",
+      "Here is an example of how to access a nested array:",
+      "",
+      "const ourPets = [",
+      "{",
+      "animalTypes : 'cat',",
+      "names: [",
+      "'Meowzer',",
+      "'Fluffy' ,",
+      "Kit-cat :'a file' ,",
+      "'folder2'",
+      "]",
+      "},",
+      "animalTypes : 'dog',",
+      "names: [",
+      "'Spot',",
+      "'Bowser' ,",
+      "'Frankie'",
+      "'folder2'",
+      "]",
+      "},",
+      "];",
+      "",
+      "ourPets[0].names[1]  // Fluffy",
+      "ourPets[1].names[0]  // Spot",
+      "secondTree should equal the string 'pine'",
+      "Your code should use dot and bracket notation to access myPlants",
+      ""
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.",
+        "placeholder": [
+          "// Setup",
+          "",
+          "const myPlants = [",
+          "{",
+          "type : 'flowers',",
+          "list: [",
+          "'rose',",
+          "'tulip' ,",
+          "'danselion'' ,",
+          "]",
+          "},",
+          "type : 'trees',",
+          "list: [",
+          "'fir',",
+          "'pine' ,",
+          "'birch'",
+          "]",
+          "},",
+          "];",
+          "const secondTree = '';"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "gloveBoxContents should equal the string 'maps'",
+      "Your code should use dot notation, where possible, to access myStorage",
+      "gloveBoxContents should still be declared with const.",
+      "You should not change the myStorage object.",
+      "The elements in the myMusic should have at least 4 properties.",
+      "Your object in myMusic should contain the property artist which is a string.",
+      "Your object in myMusic should contain the property title which is a string.",
+      "Your object in myMusic should contain the property release_year which is a number.",
+      "Your object in myMusic should contain the  formats property which is an array.",
+      "formats should be an array of strings with at least two elements"
+    ]
+  }
+]
