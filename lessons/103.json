@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Generate Random Functions with JavaScript",
+    "content": [
+      "Random numbers are useful for creating random behavior.",
+      "JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (inclusive). Thus Math.random() can return a 0 but never 1."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Change randomFraction to return a random number instead of returning 0.",
+        "placeholder": [
+          "// Setup",
+          "function randomFraction() {",
+          "",
+          "//Only change code below this line",
+          "",
+          "return 0; ",
+          "//Only change code above this line",
+          "",
+          "}"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.",
+      "randomFraction should return a random number.",
+      "The number returned by randomFraction should be a decimal.",
+      "You should be using Math.random to generate the random decimal number.",
+      "lookUpProfile('Bob', 'potato') should return the string 'No such contact'",
+      "lookUpProfile('Akira', 'address') should return the string 'No such property'"
+    ]
+  }
+]
