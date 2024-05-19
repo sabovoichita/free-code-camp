@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Generate Random Whole Numbers with JavaScript",
+    "content": [
+      "You can generate random decimal numbers with Math.random(), but sometimes you need to generate random whole numbers. The following process will give you a random whole number less than 20:",
+      "1. Use Math.Random() to generate a random decimal number.",
+      "2.Multiply that random decimal number by 20.",
+      "3. Use Math.floor() to round this number down to the nearest whole number.",
+      "Remember that Math.random() can never quite return a 1, so it's impossible to actually get 20 since you are rounding down with Math.floor(). This process will give you a random whole number in the range 0 to 19. ",
+      "Putting everything together, this is what your code looks like:",
+      "Math.floor(Math.random() * 20);",
+      "You are calling Math.random(), multiplying the result by 20, the passing the value to Math.floor() to round the value down to the nearest whole number."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "Use this technique to generate and return a random whole number in the range from 0 to 9.",
+        "placeholder": [
+          "// Setup",
+          "function randomFraction() {",
+          "",
+          "//Only change code below this line",
+          "",
+          "return 0; ",
+          "//Only change code above this line",
+          "",
+          "}"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "The result of randomWholeNum should be a whole number.",
+      "You should use Math.random to generate a random number.",
+      "You should have multiplied the result of Math.random by 10 to make it a number in the range from zero to nine.",
+      "You should use Math.floor to remove the decimal part of the number."
+    ]
+  }
+]
