@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Use Recursive to Create a Range of Numbers",
+    "content": [
+      "Continuing from the previous challenge, we provided you another opportunity to create a recursive function to soleve a problem."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": "We have defined a function called rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.",
+        "placeholder": [
+          "// Setup",
+          "function rangeOfNumbers(startNum, endNum) {",
+          "",
+          "//Only change code below this line",
+          "return;",
+          "//Only change code above this line",
+          "",
+          "}",
+          "rangeOfNumbers(1, 5);"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "Your function should return an array.",
+      "Your code should not rely on any kind of loops(for, while or higher order functions such as forEach, map, filter, and reduce)",
+      "rangeOfNumbers should use recusion(call itself) to solve this problem",
+      "rangeOfNumbers(1, 5) should return [1, 2, 3, 4, 5]",
+      "rangeOfNumbers(6, 9) should return [6, 7, 8, 9]",
+      "rangeOfNumbers(4, 4) should return [4]",
+      "Global variables should not be used to catch the array"
+    ]
+  }
+]
