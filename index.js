@@ -3,7 +3,7 @@ function $(selector) {
 }
 
 function renderDivs(lessonNumber) {
-  const container = document.getElementById("container");
+  const container = $("#container");
   for (let i = 1; i <= lessonNumber; i++) {
     const div = document.createElement("div");
     div.id = `l${i}`;
@@ -55,9 +55,20 @@ function loadLesson(lessonNumber) {
     });
 }
 
+function writeTitle() {
+  const renderTitle = $("#container");
+  const titleDiv = document.createElement("div");
+  titleDiv.id = "title";
+  titleDiv.innerHTML = `
+  <h1>JavaScript Lessons</h1>
+ `;
+  container.insertBefore(titleDiv, renderTitle.firstChild);
+}
+
 function initEvents() {
   const numberOfLessons = 115;
   renderDivs(numberOfLessons);
+  writeTitle();
 
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
