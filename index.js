@@ -32,12 +32,12 @@ function showLesson(lessonNumber, lesson) {
             <summary>Answer</summary>
             <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder
               .map((h) => `${h}`)
-              .join("")}"></textarea>
+              .join("\r\n")}"></textarea>
           </details>
         `
           )
           .join(" ")}
-          ${hint.map((h) => `<p>${h}</p>`).join("\r\n")}
+          ${hint.map((h) => `<p>${h}</p>`).join(" ")}
       </div>
     </div>`;
 
