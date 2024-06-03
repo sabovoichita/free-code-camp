@@ -37,7 +37,7 @@ function showLesson(lessonNumber, lesson) {
         `
           )
           .join(" ")}
-          ${hint.map((h) => `<p>${h}</p>`).join(" ")}
+          ${hint.map((h) => `<p>${h}</p>`).join("\r\n")}
       </div>
     </div>`;
 
