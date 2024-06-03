@@ -66,7 +66,7 @@ function writeTitle() {
 }
 
 function initEvents() {
-  const numberOfLessons = 115;
+  const numberOfLessons = 116;
   renderDivs(numberOfLessons);
   writeTitle();
 

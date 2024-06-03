@@ -1,0 +1,40 @@
+[
+  {
+    "title": "ES6 - Write Arrow Functions with Parameters",
+    "content": [
+      "Just like a regular function, you can pass arguments into an arrow function.",
+      "const doubler = (item) => item * 2;",
+      "doubler(4);",
+      "doubler(4) should return the value 8",
+      "If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.",
+      "const doubler = item => itme * 2;",
+      "It is possbile to pass more than one argument into an arrow function.",
+      "const multiplier = (item, multi) => item * multi;",
+      "multiplier(4, 2);",
+      "multiplier(4, 2) should return the value 8."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": [
+          "Rewrite the function myConcat which appends contents of arr2 to arr1 so that the function uses arrow function syntax"
+        ],
+        "placeholder": [
+          "// Setup",
+          "var myConcat = function (arr1, arr2){",
+          "\t return  arr1.concat(arr2);",
+          "};",
+          "console.log(myConcat([1, 2], [3, 4, 5]));"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      "You should replace the var keyword.",
+      "myConcat should be a constant variable( by using const).",
+      "myConcat should be an arrow function with two parameters",
+      "myConcat() should return [1, 2, 3, 4, 5]",
+      "The function keyword should not be used"
+    ]
+  }
+]
