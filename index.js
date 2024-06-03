@@ -32,7 +32,7 @@ function showLesson(lessonNumber, lesson) {
             <summary>Answer</summary>
             <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder
               .map((h) => `${h}`)
-              .join(" ")}"></textarea>
+              .join("")}"></textarea>
           </details>
         `
           )
@@ -56,7 +56,7 @@ function loadLesson(lessonNumber) {
 }
 
 function initEvents() {
-  const numberOfLessons = 112;
+  const numberOfLessons = 114;
   renderDivs(numberOfLessons);
 
   for (let i = 1; i <= numberOfLessons; i++) {
