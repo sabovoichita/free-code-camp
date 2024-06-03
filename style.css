@@ -11,6 +11,8 @@ body {
 
 h2 {
   text-align: center;
+  color: green;
+  text-decoration: underline;
 }
 
 #title {
