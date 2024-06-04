@@ -2,7 +2,7 @@
   {
     "title": "ES6 - Use Destructuring Assignment to Extract Values from Objects",
     "content": [
-      "Deastructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.",
+      "Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.",
       "Consider the following ES5 code:",
       "const user = {name: 'John Doe', age: 34};",
       "const name = user.name;",
