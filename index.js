@@ -23,13 +23,13 @@ function showLesson(lessonNumber, lesson) {
         ${content.map((contentItem) => `<p>${contentItem}</p>`).join(" ")}
       </div>
       <div class="right">
-        <h3>${eTitle}</h3>
+        <h3><u>${eTitle}</u></h3>
         ${exercises
           .map(
             (exercise) => `
           <p>${exercise.instruction}</p>
           <details>
-            <summary>Answer</summary>
+            <summary><b>Answer</b></summary>
             <textarea name="${lessonNumber}" cols="50" rows="5" placeholder="${exercise.placeholder
               .map((h) => `${h}`)
               .join("\r\n")}"></textarea>
