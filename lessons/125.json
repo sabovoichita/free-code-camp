@@ -18,30 +18,31 @@
     "exercises": [
       {
         "instruction": [
-          "Use destructuring assignment within the argument to the function half to send only max and min inside the function."
+          "Use template literal syntax with backticks to create an array of list element(li) strings. Each list element's text should be one of the array elements from failure property on the result object and have a class attribute with the value text-warning. The makeList function should return the array od list item strings. Use an iterator method(any kind of loop) to get the desired output(shown below).'<li class = 'text-warning'/>no-var<li>','<li class = 'text-warning'>var-on-top<li>','<li class = 'text-warning'>linebreak<li>'"
         ],
         "placeholder": [
           "// Setup",
-          "const stats = {",
-          "\tmax: 56.78,",
-          "\tstandard_deviation: 4.34,",
-          "\tmedian: 34.54,",
-          "\tmode:23.87, ;",
-          "min: -0.75,",
-          "\taverage: 35.85",
+          "const result = {",
+          "\tsuccess: ['max-length', 'no-amd', 'prefer-arrow-functions'],",
+          "\tfailure:['no-var', 'var-on-top', 'linebreak'],",
+          "\tskipped:['no-extra-semi', 'no-dup-keys'],",
           "};",
+          "function makeList(arr) {",
           "//Only change code below this line",
-          "const half = (stats) =>(stats.max + stats.min) /2.0;",
-          "//Only change code above this line"
+          "const failuresItems = [];",
+          "//Only change code above this line",
+          "return failuresItems;",
+          "}",
+          "const failuresList = makeList(result.failure);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " stats should be an object.",
-      " half(stats) should be 28.015",
-      " Destructuring should be used.",
-      " Destructuring parameter should be used."
+      " failuresList should be an array containing result failure messages.",
+      " failuresList should be equal to the specified output.",
+      " Template strings and expression interpolation should be used.",
+      " An iterator should be used."
     ]
   }
 ]
