@@ -1,0 +1,48 @@
+[
+  {
+    "title": "ES6 - Write Concise Declarative Functions with ES6",
+    "content": [
+      "When defining functions within objects in ES5, we have to use the keyword function as follows:",
+      "const person =  {",
+      " \tname:Taylor,",
+      " \tsayHello:function () {",
+      " \treturn `Hello! My name is ${this.name}.`;",
+      " \t}",
+      "};",
+      "With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:",
+      "const person = {",
+      " \tname:Taylor,",
+      " \tsayHello() {",
+      " \treturn `Hello! My name is ${this.name}.`;",
+      " \t}",
+      "};"
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": [
+          "Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.."
+        ],
+        "placeholder": [
+          "// Setup",
+          "//Only change code above this line",
+          "const bicycle = {",
+          "\tgear:2",
+          "\tsetGear(newGear) {",
+          "\treturn this.gear = newGear;",
+          "}",
+          "};",
+          "//Only change code below this line",
+          "bicycle.setGear(2)",
+          "console.log(bicycle.gear);"
+        ]
+      }
+    ],
+    "hint": [
+      "Hint! ",
+      " Traditional function expression should not be used,",
+      " setGear should be a declarative function.",
+      "bicycle.setGear(48) should change the gear value to 48"
+    ]
+  }
+]
