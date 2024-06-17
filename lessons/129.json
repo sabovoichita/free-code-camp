@@ -1,48 +1,36 @@
 [
   {
-    "title": "ES6 - Write Concise Declarative Functions with ES6",
+    "title": "ES6 - Write Concise Object Literal Declarations Using Object Property Shorthand",
     "content": [
-      "When defining functions within objects in ES5, we have to use the keyword function as follows:",
-      "const person =  {",
-      " \tname:Taylor,",
-      " \tsayHello:function () {",
-      " \treturn `Hello! My name is ${this.name}.`;",
-      " \t}",
-      "};",
-      "With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:",
-      "const person = {",
-      " \tname:Taylor,",
-      " \tsayHello() {",
-      " \treturn `Hello! My name is ${this.name}.`;",
-      " \t}",
-      "};"
+      "ES6 adds some nice support for easy defining object literals.",
+      "Consider the code below:",
+      "const getMousePosition = (x, y) ({",
+      " \tx:x,",
+      " \ty:y",
+      "});",
+      "getMousePosition is a simple function that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write x:x. You can simply write x once, and it will be converted to x:x(or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:",
+      "const getMousePosition = (x, y) =>({x,y})"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.."
+          "Use object property shorthand with object literals to create and return an object with name, age and gender properties."
         ],
         "placeholder": [
           "// Setup",
+          "const createPerson = (name, age, gender) =>",
           "//Only change code above this line",
-          "const bicycle = {",
-          "\tgear:2",
-          "\tsetGear(newGear) {",
-          "\treturn this.gear = newGear;",
-          "}",
-          "};",
+          "\t({name, age, gender});",
           "//Only change code below this line",
-          "bicycle.setGear(2)",
-          "console.log(bicycle.gear);"
+          "console.log(createPerson('Zodiac Hasbro', 56, 'male'));"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " Traditional function expression should not be used,",
-      " setGear should be a declarative function.",
-      "bicycle.setGear(48) should change the gear value to 48"
+      " createPerson ('Zodiac Hasbro', 56, 'male') should return {name: 'Zodiac Hasbro', age: 56, gender:'male'}",
+      " Your code should not use key:value"
     ]
   }
 ]

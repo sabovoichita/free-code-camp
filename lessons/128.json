@@ -1,36 +1,48 @@
 [
   {
-    "title": "ES6 - Write Concise Object Literal Declarations Using Object Property Shorthand",
+    "title": "ES6 - Create Strings using Template Literals",
     "content": [
-      "ES6 adds some nice support for easy defining object literals.",
+      "A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.",
+      "Template literals allow you to create multi-line strings and to use string interpolation features to create strings.",
       "Consider the code below:",
-      "const getMousePosition = (x, y) ({",
-      " \tx:x,",
-      " \ty:y",
-      "});",
-      "getMousePosition is a simple function that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write x:x. You can simply write x once, and it will be converted to x:x(or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:",
-      "const getMousePosition = (x, y) =>({x,y})"
+      "const person = {",
+      " \tname:'Zodiac Hasbro',",
+      " \tage:56",
+      "}",
+      "const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;.",
+      "console.log(greeting);",
+      "",
+      "The console will display the string 'Hello, my name is Zodiac Hasbro!' and 'I am 56 years old.','A lot of things happened here. Firstly, the example uses backticks(``), not quotes('' or \"), to wrap the string. Secondly, notice that the string is multi-line, both in the code and in the output. This saves inserting / within strings. The ${variable} syntax used above is a placeholder. Basically, you won't have to use concatenation with the + operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with $ { and }. Similarly, you can include other expressions in your string literal, for example ${a + b}. This new way of creating strings gives you more flexiblity to create robust strings."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Use object property shorthand with object literals to create and return an object with name, age and gender properties."
+          "Use template literal syntax with backticks to create an array of list element(li) strings. Each list element's text should be one of the array elements from failure property on the result object and have a class attribute with the value text-warning. The makeList function should return the array od list item strings. Use an iterator method(any kind of loop) to get the desired output(shown below).'<li class = 'text-warning'/>no-var<li>','<li class = 'text-warning'>var-on-top<li>','<li class = 'text-warning'>linebreak<li>'"
         ],
         "placeholder": [
           "// Setup",
-          "const createPerson = (name, age, gender) =>",
-          "//Only change code above this line",
-          "\t({name, age, gender});",
+          "const result = {",
+          "\tsuccess: ['max-length', 'no-amd', 'prefer-arrow-functions'],",
+          "\tfailure:['no-var', 'var-on-top', 'linebreak'],",
+          "\tskipped:['no-extra-semi', 'no-dup-keys'],",
+          "};",
+          "function makeList(arr) {",
           "//Only change code below this line",
-          "console.log(createPerson('Zodiac Hasbro', 56, 'male'));"
+          "const failuresItems = [];",
+          "//Only change code above this line",
+          "return failuresItems;",
+          "}",
+          "const failuresList = makeList(result.failure);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " createPerson ('Zodiac Hasbro', 56, 'male') should return {name: 'Zodiac Hasbro', age: 56, gender:'male'}",
-      " Your code should not use key:value"
+      " failuresList should be an array containing result failure messages.",
+      " failuresList should be equal to the specified output.",
+      " Template strings and expression interpolation should be used.",
+      " An iterator should be used."
     ]
   }
 ]

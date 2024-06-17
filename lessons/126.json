@@ -1,44 +1,37 @@
 [
   {
-    "title": "ES6 - Use Destructuring  Assignment to Pass an Object as a Function's Parameters",
+    "title": "ES6 - Destructuring via rest elements",
     "content": [
-      "In some cases, you can destructure the object in a function argument itself.",
-      "Consider the code below:",
-      "const profileUpdate = (profileData) => {",
-      "\tonst {name, age, nationality, location} = profileData ",
-      " This effectively destructures the object sent into the function. This can also be done in-place:",
-      "const profileUpdate = ({data, age, nationality, location}) => {",
-      "}",
-      "When profileData is passed to the above function, the values are destructured from the function parameter for use within the function."
+      "In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.",
+      "The result is similar to Array.prototype.slice(), as shown below:",
+      "const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];",
+      " console.log(a, b);",
+      " console.log(arr);",
+      "The console will display the values 1, 2 and [3, 4, 5, 7].",
+      "The variables a and b  take the first and second values from the array. After that, because of the rest syntax presence, arr gets the rest of the values in the form of the array. The rest element only works correctly as the last variable in the list. As in, you cannot use the rest syntax to catch a subarray that leaves out the last element of the original array."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Use destructuring assignment within the argument to the function half to send only max and min inside the function."
+          "Use destructuring assignment with the rest syntax to emulate the behaviour of Array.prototype.slice().removeFirstTwo() should return a sub-array of the original array list with the first two elements omitted.."
         ],
         "placeholder": [
           "// Setup",
-          "const stats = {",
-          "\tmax: 56.78,",
-          "\tstandard_deviation: 4.34,",
-          "\tmedian: 34.54,",
-          "\tmode:23.87, ;",
-          "min: -0.75,",
-          "\taverage: 35.85",
-          "};",
-          "//Only change code below this line",
-          "const half = (stats) =>(stats.max + stats.min) /2.0;",
-          "//Only change code above this line"
+          "function removeFirstTwo(list) {",
+          "\treturn list;",
+          "}",
+          "const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];",
+          "const sourceWithoutFirstTwo = removeFirstTwo(source);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " stats should be an object.",
-      " half(stats) should be 28.015",
-      " Destructuring should be used.",
-      " Destructuring parameter should be used."
+      " removeFirstTwo([1, 2, 3, 4, 5]) should be [3, 4, 5]",
+      " removeFirstTwo() should not modify list",
+      " Array.slice() should not be used.",
+      " You should use the rest syntax"
     ]
   }
 ]

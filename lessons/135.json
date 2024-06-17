@@ -1,27 +1,31 @@
 [
   {
-    "title": "ES6 - Use * to Import Everything from a File",
+    "title": "ES6 - Reuse JavaScript Code Using import",
     "content": [
-      "Suppose you have the file and you wish to import all of its contents into the current file. This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory:",
-      "import * as myMathModule from './math_functions.js'",
-      "The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything. The object will contain all of the exports from math_functions.js in it, so you can access the functions like you would any other object prpoerty. Here's how you can use the add and subtract functions that were imported:",
-      "myMathModule.add(2, 3);",
-      "myMathModule.subtract(5, 3);"
+      "import allows you to choose which parts of a file or module to load. In the previos lesson, the example exported add from the math_functions.js file. Here how you can import it to use in other file:",
+      "import { add } from './math_functions.js'",
+      "Here, import will find add in math_functions.js, import just that function for you to use, and ignore the rest. The ./ tells the import to look for the math_functions.js file in the same folder of the current file. The relative file path (./) and file extensions (.js) are required when using import in this way.",
+      "You can import more than one item from the file by adding in the import statements like this:",
+      "import { add, subtract } from './math_functions.js';"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "The code in this file requires the contents of the file: string_functions.js, that is in the same directory as the current file. Use the import * as syntax to import everything from the file into an object called stringFunctions."
+          "Add the appropriate import statement that will allow the current file to use the uppercaseString and lowercaseString functions you exported in the previous lesson. These functions are in a file called string_functions.js, which is in the same directory as the current file ."
         ],
         "placeholder": [
           "// Setup",
           "// Only change code above this line",
-          "stringFunctions.uppercaseString('hello')",
-          "stringFunctions.lowercaseString('WORLD!')"
+          "uppercaseString('hello')",
+          "lowercaseString('WORLD!')"
         ]
       }
     ],
-    "hint": [" Hint! ", " You should properly use import  * as syntax"]
+    "hint": [
+      " Hint! ",
+      " You should properly export uppercaseString.",
+      " You should properly export lowercaseString."
+    ]
   }
 ]

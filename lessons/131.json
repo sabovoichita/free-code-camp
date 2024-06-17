@@ -1,62 +1,60 @@
 [
   {
-    "title": "ES6 - Use getters and setters to Control Access to an Object",
+    "title": "ES6 - Use class Syntax to Define a Constructor Function",
     "content": [
-      "You can obtain values from an object and set the values of a property within an object",
-      "These are classically called getters and setters.",
-      "Getters functions are meant to simplify return(get) the value of an object's private variable to the user without the user directly accessing the private variable.",
-      "Setters functions are meant to modify(set) the value of an objet's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previoud value completely.",
-      "class Book {",
-      "\tconstructor(author) {",
-      "this._author = author;",
-      "\t}",
-      "//getter",
-      "\tget writer() {",
-      " \treturn this._author;",
+      "ES6 provides a new syntax to create objects, using the class keyword.",
+      "In ES5, an object can be created by defining a constructor function using the new keyword to instantiate the object.",
+      "In ES6, a class declaration has a constructor method that is invoked with the new keyword. If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.",
+      "//Explicit constructor",
+      "class SpaceShuttle {",
+      "this.targetPlanet = targetPlanet + '!';",
+      "};",
+      "\ttakeOff() {",
+      "\t\tconsole.log('To' + this.targetPlanet)",
+      " \t},",
       " \t}",
-      " \t//setter",
-      " set writer(updateAuthor) {",
-      "this._author = updateAuthor;",
-      "\t}",
-      "\t}",
-      "const novel = new Book('anonymous');",
-      "console.log(novel.writer);",
-      "novel.writer = 'newAuthor';",
-      "console.log(novel.author)",
-      "The console would display the strings anonymous and newAuthor.",
-      "Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are impoortant because they hide internak implementation details",
-      "Note: It is convention to precede the name of a private variable with underscore(_). However, the practice itself does not make a variable private."
+      " \t",
+      " //Implicit constructor",
+      "class Rockey {",
+      "\tlaunch {",
+      "\t\tconsole.log('To the moon!';)",
+      "}",
+      "}",
+      "",
+      "const zeus = new SpaceShuttle('Jupiter')",
+      "//prints to Jupiter! in console",
+      "zeus.ttakeOff();",
+      "\t",
+      "const atlas = new Rocket();",
+      "prints To the moon! in console",
+      "atlas.launch();",
+      "It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.",
+      "Note:UpperCaseCamel should be used by convention for ES6 class names, as in SpaceShuttle used above.",
+      "The constructor method is a special method for creating and initializing an object created with a class. You will learn more about it in the Object Oriented Programming section of the JavaScript Algorithms and Data Structures Certification."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Use the class keyword to create a Thermostat class. The constructor accepts a Fahrenheit temperature. In the class, create a getter to obtain the temperature in Celsius and a setter that accepts a temperature in Celsius. Remember that C = 5/9 * (F - 32) and F = C * 9.0/ 5 + 32, wher F is the value of temperature in Fahrenheit, and C is the value of the same temperature in Celsius."
+          "Use the class keyword to write a constructor to create a Vegetable class..",
+          "The Vegetable class allows you to create a vegetable object with a property name that gets passed to the constructor."
         ],
         "placeholder": [
           "// Setup",
           "//Only change code above this line",
           "",
           "//Only change code below this line",
-          "const thermos = new Thermostat(76); //Setting in Fahrenheit scale",
-          "let temp = themos.temperature; // 24.44 in Celsius",
-          "thermos.temperature = 26;",
-          "temp = thermos.temperature; // 26 in Celsius"
+          "const carrot = new Vegetable ('carrot')",
+          "console.log(carrot.name); //Should display carrot"
         ]
       }
     ],
     "hint": [
-      " Note: When you implement this, you will track the temperature inside the class in one scale, either Fahrenheit or Celsius",
-      " This is the power of a getter and setter. You are creating an API for other user, who can get the correct result regardless of which one you track.",
-      " In other words, you are abstracting implementation details from the user",
       "Hint! ",
-      "Thermostat should be a class with a defined constructor method.",
-      "The class keyword should be used",
-      "Thermostat should be able to be instantiated",
-      "When instantiated with a Fahrenheit value, Thermostat should set the corrct temperature.",
-      "A getter should be defined",
-      "A setter should be defined",
-      "Calling the setter with Celsius value should set the temperature"
+      " Vegetable should be a class with a defined constructor method.",
+      " The class keyword should be used",
+      " Vegetable should be able to be instantiate",
+      "carrot.name should return carrot"
     ]
   }
 ]

@@ -1,38 +1,32 @@
 [
   {
-    "title": "ES6 - Use Destructuring Assignment to Assign Variables from Nested Objects",
+    "title": "ES6 - Use Destructuring Assignment to Assign Variables from  Objects",
     "content": [
-      "You can use the same principles from the previous two lessons to destructure values from nested objects.",
-      "Using the object similar to previous examples:",
-      "const user = {",
-      "\t johnDoe: {",
-      " \t \t age:34,",
-      "email: 'johnDoe@freeCodeCamp.com'",
-      "}",
-      "};",
-      "Here's how to extract the values of object properties and assign them to variables with the same name:",
-      "const { johnDoe: {age, email}} = user;",
-      "And here's how you can assign object propeties' values to variables with different names:",
-      "const { johnDoe: {age:userAge; email: userEmail}} = user;"
+      "Destructuring allows you to assign a new variable name when extracting values. You can do this by putting a new name after a colon when assgning the value",
+      "Using the same object from the last examples:",
+      "const user = {name:'John Doe', age:34};",
+      "Here's how you can give ne variable names in the assignment:",
+      "const {name:userName, age:userAge} = user;",
+      "You  may read it as 'get the value of user.name and assign it to a new variable named userName' and so on. The value of userName would be the string JohnDoe and the value of userAge would be the number 34."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values  of today.low and today.high  the LOCAL_FORECAST object."
+          "Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values  of today and tomorrow  the HIGH_TEMPERATURES object."
         ],
         "placeholder": [
           "// Setup",
-          "const LOCAL_FORECAST = {",
-          " \t yesterday: { low: 61, high: 75 },",
-          "\t today : {low : 64, high: 77},",
-          "\t tomorrow: {low: 68, high: 80}",
+          "const HIGH_TEMPERATURES = {",
+          " \t yesterday: 75,",
+          "\t today : 75",
+          "\t tomorrow: 80",
           "};",
           "",
           "// Only change code below this line",
           "",
-          "const lowToday = LOCAL_FORECAST.today.low;",
-          "const highToday = LOCAL_FORECAST.today.high;",
+          "const highToday = HIGH_TEMPERATURES.today;",
+          "const highTomorrow = HIGH_TEMPERATURES.tomorrow;",
           "",
           "//Only change code above this line"
         ]
@@ -41,9 +35,9 @@
     "hint": [
       "Hint! ",
       " You should remove the ES5 assignment syntax.",
-      " You should use destructuring to create the lowToday variable.",
       " You should use destructuring to create the highToday variable.",
-      "lowToday should be equal to 64 and highToday should be equal to 77."
+      " You should use destructuring to create the highTomorrow variable.",
+      "highToday should be equal to 77 and highTomorrow should be equal to 80."
     ]
   }
 ]

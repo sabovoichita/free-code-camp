@@ -1,40 +1,33 @@
 [
   {
-    "title": "ES6 - Use export to Share a Code Block",
+    "title": "ES6 - Create a Module Script",
     "content": [
-      "Imagine a file called 'math_functions.js' that contains several functions related to mathematical operations. One of them is stores in a variable, 'add', that takes in two numbers and returns their sum. You want to use this function in several different JavaScript files. In order to share it with these other files, you need to export it.",
-      "export const add = (x + y)=>{",
-      "return x + Y;",
-      "}",
-      "The above is a common way to export a single function, but you can achieve the same thing like this:",
-      "const add = (x + y) => {",
-      "return x + y",
-      "}",
-      "export {add};",
-      "When you export a variable or function, you can import it in another file to use it without having to rewrite the code. You can export multiple things by repeating the first example for each thing you want to export, or by placing the all in the export statement of the second example, like this: ",
-      "export {add,subtract};"
+      "JavaScript started with a small role to play on an otherwise mostly HTML web. Today, it's huge, and some websites are build almost entirely with JavaScript. In order to make JavaScript more modular, cleanm and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantages of this functionality, you need to create a script in your HTML document with a type of module. Here's an example:",
+      "'<'script type = 'module' src = 'filename.js'> '<'/script>",
+      "A script that uses this module type can now use the import and export features you will learn in the upcoming challenges."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "There are two string-related functions in the editor. Export both of them using the method of your choice."
+          "Add a script to the HTML document of type module and give it the source file of index.js."
         ],
         "placeholder": [
           "// Setup",
-          "const uppercaseString = (string)=>{",
-          "return string.toUpperCase();",
-          "}",
-          "const lowercaseString = (string) => {",
-          "return string.toLowerCase()",
-          "}"
+          "<html>",
+          "<body>",
+          "//Only change code above this line",
+          "",
+          "//Only change code below this line",
+          "</html>",
+          "</body>"
         ]
       }
     ],
     "hint": [
-      " Hint! ",
-      " You should properly export uppercaseString.",
-      " You should properly export lowercaseString."
+      " Hint! You should create a script tag",
+      " Your script tag should have the type attribute with a value of module",
+      " Your script taqg should have a src of index.js"
     ]
   }
 ]
