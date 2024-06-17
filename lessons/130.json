@@ -1,0 +1,33 @@
+[
+  {
+    "title": "ES6 - Create a Module Script",
+    "content": [
+      "JavaScript started with a small role to play on an otherwise mostly HTML web. Today, it's huge, and some websites are build almost entirely with JavaScript. In order to make JavaScript more modular, cleanm and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantages of this functionality, you need to create a script in your HTML document with a type of module. Here's an example:",
+      "'<'script type = 'module' src = 'filename.js'> '<'/script>",
+      "A script that uses this module type can now use the import and export features you will learn in the upcoming challenges."
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": [
+          "Add a script to the HTML document of type module and give it the source file of index.js."
+        ],
+        "placeholder": [
+          "// Setup",
+          "<html>",
+          "<body>",
+          "//Only change code above this line",
+          "",
+          "//Only change code below this line",
+          "</html>",
+          "</body>"
+        ]
+      }
+    ],
+    "hint": [
+      " Hint! You should create a script tag",
+      " Your script tag should have the type attribute with a value of module",
+      " Your script taqg should have a src of index.js"
+    ]
+  }
+]
