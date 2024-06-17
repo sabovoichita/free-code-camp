@@ -1,44 +1,40 @@
 [
   {
-    "title": "ES6 - Use the Rest Parameter with Function Parameters",
+    "title": "ES6 - Write Arrow Functions with Parameters",
     "content": [
-      "In order to help us create more flexible functions, ES6 introduces rest parameter for function parameters.With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.",
-      "Check out this code:",
-      "function howMany (...args) {",
-      "return 'You have passed ' + args.length + ' arguments.';",
-      "}",
-      "console.log(howMany(0, 1, 2));",
-      "console.log(howMany('string', null, [1, 2, 3], { }));",
-      "The console will display the string You have passed 3 arguments. and You have passed 4 arguments",
-      "The rest parameter eliminated the need to use the arguments objects and allows us to use array mathods on the array of parameters passed to the function howMany."
+      "Just like a regular function, you can pass arguments into an arrow function.",
+      "const doubler = (item) => item * 2;",
+      "doubler(4);",
+      "doubler(4) should return the value 8",
+      "If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.",
+      "const doubler = item => itme * 2;",
+      "It is possbile to pass more than one argument into an arrow function.",
+      "const multiplier = (item, multi) => item * multi;",
+      "multiplier(4, 2);",
+      "multiplier(4, 2) should return the value 8."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Modify the function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum."
+          "Rewrite the function myConcat which appends contents of arr2 to arr1 so that the function uses arrow function syntax"
         ],
         "placeholder": [
           "// Setup",
-          "const sum = (x, y, z) => {",
-          "const args = [x, y, z];",
-          "let total = 0;",
-          "for (let i = 0; i < args.length; i++) {",
-          "\ttotal += args[i];",
-          "}",
-          "return total;",
-          "}"
+          "var myConcat = function (arr1, arr2){",
+          "\t return  arr1.concat(arr2);",
+          "};",
+          "console.log(myConcat([1, 2], [3, 4, 5]));"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "The result of sum(0, 1, 2) should be 3",
-      "The result of sum(0, 1, 2, 3) should be 10",
-      "The result of sum(5) should be 5",
-      "The result of sum() should be 0",
-      "sum should be an arrow function which uses the rest parameter syntax(...) on the args parameter",
-      "A default parameter value of 1 should be used for value."
+      "You should replace the var keyword.",
+      "myConcat should be a constant variable( by using const).",
+      "myConcat should be an arrow function with two parameters",
+      "myConcat() should return [1, 2, 3, 4, 5]",
+      "The function keyword should not be used"
     ]
   }
 ]

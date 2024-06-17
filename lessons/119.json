@@ -1,41 +1,35 @@
 [
   {
-    "title": "ES6 - Use the Spread Operator to Evaluate Arrays In-Place",
+    "title": "ES6 - Set Default Parameters for Your Functions",
     "content": [
-      "ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.",
-      "The ES5 code below uses apply() to compute the maximum value in an array:",
-      "var arr = [6, 89, 3, 45];",
-      "var maximus = Math.max.apply(null, arr);",
-      "maximus would have a value of 89.",
-      "We had to use Math.max.apply(null, arr) because Math.max(arr) returns NaN. Math.max() expects comma-sepatated arguments, but not an array. The spread operator makes this syntax much better to read and maintain.",
-      "const arr = [6, 89, 3, 45];",
-      "const maximus = Math.max(...arr);",
-      "maximus would havr a value of 89.",
-      "...arr returns an unoacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. For example:.",
-      "const spreaded = [...arr];",
-      "However, the following code will not work:",
-      "const spreaded = ...arr;"
+      "In order to help us create more flexible functions, ES6 introduces default parameters for functions.",
+      "Check out this code:",
+      "const greeting = (name = 'Anonymous') => 'Hello' + name';",
+      "console.log(greeting('John'))",
+      "console.log(greeting())",
+      "The console will display the string Hello John and Hello Anonymous.",
+      "The default parameter kicks in when the argument is not specified(it is undefined).As you can see in the example above, the parameter name will receive its default value Anonymous when you do not provide a value for the parameter. You can add default values for as many parameters as you want."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Copy all contents of arr1 into another arr arr2 using the spread operator."
+          "Modify the function increment by adding default parameters so that it will add 1 to number if value is not specified"
         ],
         "placeholder": [
           "// Setup",
-          "const arr1 = ['JAN', 'FEB, 'MAR', 'APR', 'MAY'];",
-          "let arr2;",
-          "arr2 = []",
-          "console.log(arr2)"
+          "// Only change code below this line",
+          "const increment = (number, value) => number + value;",
+          "};",
+          "console.log(myConcat([1, 2], [3, 4, 5]));"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " arr2 should be correct copy of arr1.",
-      " ... apread operator should be used to duplicate arr1.",
-      " arr2 should remain unchanged when arr1 is changed"
+      "The result of increment(5, 2) should be 7.",
+      "The result of increment(5) should be 6.",
+      "A default parameter value of 1 should be used for value."
     ]
   }
 ]

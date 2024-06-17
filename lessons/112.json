@@ -1,67 +1,48 @@
 [
   {
-    "title": "ES6 - Compare Scopes of the var and let Keywords",
+    "title": "Use Recursive to Create a Countdown",
     "content": [
-      "When we declare a variable with var keyword, it is declared globally, or locally if declared inside a function.",
-      "The let keywords behaves similarly, but with some extra features. When you declare a variable with the let keyword inside a block, statement, or expressionm its scope is limited to that block, statement, or expression.",
-      "For example:",
-      "var numArray = [];",
-      "for (var i = 0; i < 3; i++) {",
-      "numArray.push(i);",
-      "}",
-      "console.log(numArray);",
-      "console.log(i);",
-      "Here the console will display the values [0, 1, 2] and 3",
-      "This behaviour will case problems if we were to create a function and store it for later use inside a for loop that uses the i variable. This is because the stored function will always refer to the value of the updated global i variable.",
-      "var printNumTwo;",
-      "for (var i = 0; i < 3; i++) {",
-      "if (i === 2) {",
-      "printNumTwo = function() {",
-      "return i;",
-      "};",
+      "In a previous challenge, you learned how to use recursion to replace a for loop. Now, let's look at a more complex function that returns an array of consecutive integers starting with 1 through the number passed to the function.",
+      "As mentioned in the previous challengem there will be a base case, The base case tells the recursive function when it no longer needs to call itself. It is a simple case where the return value is already known. There will also be a recursive call which executes the original function with different arguments. If the function is written correctly, eventually the base case will be reached.",
+      "For example, say you want to write a recursive function that returns an array containing the numbers 1 through n. This function will need to accept an an argument, n, representing the final number. Then it will need to call itself with progressively smaller values of n until it reaches 1. You could write the function as follows:",
+      "function countup(n) {",
+      "if (n > 1) {",
+      "return [];",
+      "} else { ",
+      "const countArray = countup(n - 1);",
+      "countArray.push(n);",
+      "return countArray;",
       "}",
       "}",
-      "console.log(printNumTwo());",
-      "Here the console will display the value 3.",
-      "As you can see, printNumTwo() prints 3 and not 2. This is because the value assigned to i has been updated and the printNumTwo() returns the global i and not the value i had when the function was created in the for loop. The let keyword does not follow this behaviour:",
-      "let printNumTwo;",
-      "for (var i = 0; i < 3; i++) {",
-      "if (i === 2) {",
-      "printNumTwo = function() {",
-      "return i;",
-      "};",
-      "}",
-      "}",
-      "console.log(printNumTwo());",
-      "Here the console will display the value 2, and an error that i is not defined.",
-      "i is not defined because it was not declared in the global scope. It is only declared within the for loop statement. printNumTwo() returned the correct value because three different i variables with unique values (0, 1 and 2) were created by the let keyword within the loop statement."
+      "console.log(countup(5));",
+      "The values [1, 2, 3, 4, 5] will be displayed in the console.",
+      "At first, this seems counterintuitive since the value of n decreases, but the values in the final array are increasing. This happens because the push happens last, after the recursive call has returned. At the point where n is pushed into the array, countup(n - 1) has already been evaluated and returned [1, 2, ..., n - 1]"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": [
-          "Fix the code so that i declared in the if statement is a separate variable than i declared in the first line of the function. Be certain not to use the var keyword anywhere in your code.",
-          "This exercise is designed to illustrate the difference between how var and let keywords assign scope to the declared variable. When programming a function similar to the one used in this exercise, it is often better to use different variable names to avoid confusion."
-        ],
+        "instruction": "We have defined a function called countdown with one parameter (n). The function should use recursion to return an array containing the integers n through 1 base of the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. The function must use recursion by calling itself and must not use loops of any kind",
         "placeholder": [
           "// Setup",
-          "function checkScope() {",
-          "var i = 'function scope';",
-          "if (true) {",
-          "i = 'block scope';",
-          "console.log('Block scope i is : ', i);",
+          "function countdown(n) {",
+          "",
+          "//Only change code below this line",
+          "return;",
+          "//Only change code above this line",
+          "",
           "}",
-          "console.log('Function scope i  is ', i);",
-          "return i;",
-          "}"
+          "countdown(10);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "var should not exist in code.",
-      "The variable i declared in the if statement should equal the string block scope.",
-      "checkScope() should return the string function scope"
+      "countdown(-1) should return an empty array.",
+      "countdown(10) should return [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]",
+      "countdown(5) should return [5, 4, 3, 2, 1]",
+      "Your code should not rely on any kind of loops(for, while or higher order functions such as forEach, map, filter, and reduce)",
+      "You should use recusion to solve this problem",
+      "Global variables should not be used to catch the array"
     ]
   }
 ]

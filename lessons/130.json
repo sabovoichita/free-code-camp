@@ -1,33 +1,60 @@
 [
   {
-    "title": "ES6 - Create a Module Script",
+    "title": "ES6 - Use class Syntax to Define a Constructor Function",
     "content": [
-      "JavaScript started with a small role to play on an otherwise mostly HTML web. Today, it's huge, and some websites are build almost entirely with JavaScript. In order to make JavaScript more modular, cleanm and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantages of this functionality, you need to create a script in your HTML document with a type of module. Here's an example:",
-      "'<'script type = 'module' src = 'filename.js'> '<'/script>",
-      "A script that uses this module type can now use the import and export features you will learn in the upcoming challenges."
+      "ES6 provides a new syntax to create objects, using the class keyword.",
+      "In ES5, an object can be created by defining a constructor function using the new keyword to instantiate the object.",
+      "In ES6, a class declaration has a constructor method that is invoked with the new keyword. If the constructor method is not explicitly defined, then it is implicitly defined with no arguments.",
+      "//Explicit constructor",
+      "class SpaceShuttle {",
+      "this.targetPlanet = targetPlanet + '!';",
+      "};",
+      "\ttakeOff() {",
+      "\t\tconsole.log('To' + this.targetPlanet)",
+      " \t},",
+      " \t}",
+      " \t",
+      " //Implicit constructor",
+      "class Rockey {",
+      "\tlaunch {",
+      "\t\tconsole.log('To the moon!';)",
+      "}",
+      "}",
+      "",
+      "const zeus = new SpaceShuttle('Jupiter')",
+      "//prints to Jupiter! in console",
+      "zeus.ttakeOff();",
+      "\t",
+      "const atlas = new Rocket();",
+      "prints To the moon! in console",
+      "atlas.launch();",
+      "It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.",
+      "Note:UpperCaseCamel should be used by convention for ES6 class names, as in SpaceShuttle used above.",
+      "The constructor method is a special method for creating and initializing an object created with a class. You will learn more about it in the Object Oriented Programming section of the JavaScript Algorithms and Data Structures Certification."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Add a script to the HTML document of type module and give it the source file of index.js."
+          "Use the class keyword to write a constructor to create a Vegetable class..",
+          "The Vegetable class allows you to create a vegetable object with a property name that gets passed to the constructor."
         ],
         "placeholder": [
           "// Setup",
-          "<html>",
-          "<body>",
           "//Only change code above this line",
           "",
           "//Only change code below this line",
-          "</html>",
-          "</body>"
+          "const carrot = new Vegetable ('carrot')",
+          "console.log(carrot.name); //Should display carrot"
         ]
       }
     ],
     "hint": [
-      " Hint! You should create a script tag",
-      " Your script tag should have the type attribute with a value of module",
-      " Your script taqg should have a src of index.js"
+      "Hint! ",
+      " Vegetable should be a class with a defined constructor method.",
+      " The class keyword should be used",
+      " Vegetable should be able to be instantiate",
+      "carrot.name should return carrot"
     ]
   }
 ]

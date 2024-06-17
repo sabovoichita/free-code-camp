@@ -1,43 +1,35 @@
 [
   {
-    "title": "ES6 - Mutate an Array Declared with const",
+    "title": "Use Recursive to Create a Range of Numbers",
     "content": [
-      "The const declaration has many use cases in modern JavaScript",
-      "Some developers prefer to assign all their variables using const by default, unless they know they will need to reassign the value. Only in that case, they use let.",
-      "However,  it is important to understand that objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.",
-      "const s = [5, 6, 7];",
-      "s = [1, 2, 3];",
-      "s[2] = 45;",
-      "console.log(s);",
-      "s = [1, 2, 3] will result in an error. After commenting out that line, the console.log will display the value [5, 6, 45].",
-      "As you can see, you can mutate the object [5, 6, 7] itself and the variable s will still point to the alterated array [5, 6, 45]. Like all arrays, the array elements in s are mutable, but becasuse const was used, you cannot use the variable identifier s to point to a different array using the assignment operator."
+      "Continuing from the previous challenge, we provided you another opportunity to create a recursive function to soleve a problem."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": [
-          "An array is declared as const s = [5, 7, 2]. Change the array to [2, 5, 7] using various element assignments."
-        ],
+        "instruction": "We have defined a function called rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.",
         "placeholder": [
           "// Setup",
-          "function checkScope() {",
-          "var i = 'function scope';",
-          "if (true) {",
-          "i = 'block scope';",
-          "console.log('Block scope i is : ', i);",
+          "function rangeOfNumbers(startNum, endNum) {",
+          "",
+          "//Only change code below this line",
+          "return;",
+          "//Only change code above this line",
+          "",
           "}",
-          "console.log('Function scope i  is ', i);",
-          "return i;",
-          "}"
+          "rangeOfNumbers(1, 5);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "you should not replace const keyword.",
-      "s should not change the original array declaration.",
-      "You should not change the original array declaration.",
-      "s should equal to [2, 5, 7]"
+      "Your function should return an array.",
+      "Your code should not rely on any kind of loops(for, while or higher order functions such as forEach, map, filter, and reduce)",
+      "rangeOfNumbers should use recusion(call itself) to solve this problem",
+      "rangeOfNumbers(1, 5) should return [1, 2, 3, 4, 5]",
+      "rangeOfNumbers(6, 9) should return [6, 7, 8, 9]",
+      "rangeOfNumbers(4, 4) should return [4]",
+      "Global variables should not be used to catch the array"
     ]
   }
 ]

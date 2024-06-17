@@ -1,35 +1,55 @@
 [
   {
-    "title": "Use Recursive to Create a Range of Numbers",
+    "title": "Use the Multiple (Ternary) Operator",
     "content": [
-      "Continuing from the previous challenge, we provided you another opportunity to create a recursive function to soleve a problem."
+      "In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.",
+      "The following function uses if, else if, and else statements to check multiple conditions.",
+      "function findGreaterOrEqual(a, b) {",
+      "if ( a === b) {",
+      "return 'a and b are equal';",
+      "}",
+      "else if (a > b) { ",
+      "return 'b is greater';",
+      "}",
+      "else {",
+      "return 'a is greater';",
+      "else {",
+      "return 'b is greater';",
+      "}",
+      "}",
+      "The above function can be re-written using multiple conditional operators:",
+      "Function finfGreaterOrEqual (a, b) {",
+      " return ( a === b) ? 'a and b are equal'",
+      ": ( a > b) ? 'a is greater' : 'b is greater';",
+      "}",
+      "It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators proper indentation may make your code hard to read. For example:",
+      "function findGreaterOrEqual(a, b) {",
+      "return  ( a === b) ? 'a and b are equal' : ( a > b) ? ' a is greater'; ",
+      "}"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": "We have defined a function called rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.",
+        "instruction": "In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return positive, negative or zero.",
         "placeholder": [
           "// Setup",
-          "function rangeOfNumbers(startNum, endNum) {",
+          "function checkSign(num) {",
           "",
           "//Only change code below this line",
-          "return;",
+          "",
           "//Only change code above this line",
           "",
           "}",
-          "rangeOfNumbers(1, 5);"
+          "checkSign(10);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "Your function should return an array.",
-      "Your code should not rely on any kind of loops(for, while or higher order functions such as forEach, map, filter, and reduce)",
-      "rangeOfNumbers should use recusion(call itself) to solve this problem",
-      "rangeOfNumbers(1, 5) should return [1, 2, 3, 4, 5]",
-      "rangeOfNumbers(6, 9) should return [6, 7, 8, 9]",
-      "rangeOfNumbers(4, 4) should return [4]",
-      "Global variables should not be used to catch the array"
+      "checkSign should use multiple conditional operators",
+      "checkSign(10) should return the string positive. Note that capitalization matters",
+      "checkSign(-12) should return the string negative. Note that capitalization matters",
+      "checkSign(0) should return the string zero. Note that capitalization matters"
     ]
   }
 ]

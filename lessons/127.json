@@ -1,48 +1,48 @@
 [
   {
-    "title": "ES6 - Write Concise Declarative Functions with ES6",
+    "title": "ES6 - Create Strings using Template Literals",
     "content": [
-      "When defining functions within objects in ES5, we have to use the keyword function as follows:",
-      "const person =  {",
-      " \tname:Taylor,",
-      " \tsayHello:function () {",
-      " \treturn `Hello! My name is ${this.name}.`;",
-      " \t}",
-      "};",
-      "With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:",
+      "A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.",
+      "Template literals allow you to create multi-line strings and to use string interpolation features to create strings.",
+      "Consider the code below:",
       "const person = {",
-      " \tname:Taylor,",
-      " \tsayHello() {",
-      " \treturn `Hello! My name is ${this.name}.`;",
-      " \t}",
-      "};"
+      " \tname:'Zodiac Hasbro',",
+      " \tage:56",
+      "}",
+      "const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;.",
+      "console.log(greeting);",
+      "",
+      "The console will display the string 'Hello, my name is Zodiac Hasbro!' and 'I am 56 years old.','A lot of things happened here. Firstly, the example uses backticks(``), not quotes('' or \"), to wrap the string. Secondly, notice that the string is multi-line, both in the code and in the output. This saves inserting / within strings. The ${variable} syntax used above is a placeholder. Basically, you won't have to use concatenation with the + operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with $ { and }. Similarly, you can include other expressions in your string literal, for example ${a + b}. This new way of creating strings gives you more flexiblity to create robust strings."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Refactor the function setGear inside the object bicycle to use the shorthand syntax described above.."
+          "Use template literal syntax with backticks to create an array of list element(li) strings. Each list element's text should be one of the array elements from failure property on the result object and have a class attribute with the value text-warning. The makeList function should return the array od list item strings. Use an iterator method(any kind of loop) to get the desired output(shown below).'<li class = 'text-warning'/>no-var<li>','<li class = 'text-warning'>var-on-top<li>','<li class = 'text-warning'>linebreak<li>'"
         ],
         "placeholder": [
           "// Setup",
-          "//Only change code above this line",
-          "const bicycle = {",
-          "\tgear:2",
-          "\tsetGear(newGear) {",
-          "\treturn this.gear = newGear;",
-          "}",
+          "const result = {",
+          "\tsuccess: ['max-length', 'no-amd', 'prefer-arrow-functions'],",
+          "\tfailure:['no-var', 'var-on-top', 'linebreak'],",
+          "\tskipped:['no-extra-semi', 'no-dup-keys'],",
           "};",
+          "function makeList(arr) {",
           "//Only change code below this line",
-          "bicycle.setGear(2)",
-          "console.log(bicycle.gear);"
+          "const failuresItems = [];",
+          "//Only change code above this line",
+          "return failuresItems;",
+          "}",
+          "const failuresList = makeList(result.failure);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " Traditional function expression should not be used,",
-      " setGear should be a declarative function.",
-      "bicycle.setGear(48) should change the gear value to 48"
+      " failuresList should be an array containing result failure messages.",
+      " failuresList should be equal to the specified output.",
+      " Template strings and expression interpolation should be used.",
+      " An iterator should be used."
     ]
   }
 ]

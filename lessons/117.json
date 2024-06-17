@@ -1,35 +1,44 @@
 [
   {
-    "title": "ES6 - Set Default Parameters for Your Functions",
+    "title": "ES6 - Use Arrow Functions to Write Concise Anonymous Functions",
     "content": [
-      "In order to help us create more flexible functions, ES6 introduces default parameters for functions.",
-      "Check out this code:",
-      "const greeting = (name = 'Anonymous') => 'Hello' + name';",
-      "console.log(greeting('John'))",
-      "console.log(greeting())",
-      "The console will display the string Hello John and Hello Anonymous.",
-      "The default parameter kicks in when the argument is not specified(it is undefined).As you can see in the example above, the parameter name will receive its default value Anonymous when you do not provide a value for the parameter. You can add default values for as many parameters as you want."
+      "In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we don't reuse them anywhere else.",
+      "To achieve this, we often use the following syntax:",
+      "const myFunc = function () {",
+      "const myVar = 'value';",
+      "return myVar;",
+      "}",
+      "ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use arrow function syntax:",
+      "const myFunc = () => {",
+      "const myVar = 'value';",
+      "return myVar;",
+      "}",
+      "When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. This helps simpify smaller functions into one-line statements:",
+      "const myFunc = () => 'value';",
+      "This code will still return the string value by default"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Modify the function increment by adding default parameters so that it will add 1 to number if value is not specified"
+          "Rewrite the function assigned to the variable magic which returns a newDate() to use arrow function syntax. Also, make sure nothing is defined using the keyword var.."
         ],
         "placeholder": [
           "// Setup",
-          "// Only change code below this line",
-          "const increment = (number, value) => number + value;",
+          "var magic = function (){",
+          "return new Date();",
           "};",
-          "console.log(myConcat([1, 2], [3, 4, 5]));"
+          "console.log(magic());"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "The result of increment(5, 2) should be 7.",
-      "The result of increment(5) should be 6.",
-      "A default parameter value of 1 should be used for value."
+      "You should replace the var keyword.",
+      "magic should be a constant variable (by using const)",
+      "magic should be a function.",
+      "magic() should return the correct date.",
+      "The function keyword should not be used"
     ]
   }
 ]

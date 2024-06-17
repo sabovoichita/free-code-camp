@@ -1,37 +1,49 @@
 [
   {
-    "title": "ES6 - Destructuring via rest elements",
+    "title": "ES6 - Use Destructuring Assignment to Assign Variables from Nested Objects",
     "content": [
-      "In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.",
-      "The result is similar to Array.prototype.slice(), as shown below:",
-      "const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];",
-      " console.log(a, b);",
-      " console.log(arr);",
-      "The console will display the values 1, 2 and [3, 4, 5, 7].",
-      "The variables a and b  take the first and second values from the array. After that, because of the rest syntax presence, arr gets the rest of the values in the form of the array. The rest element only works correctly as the last variable in the list. As in, you cannot use the rest syntax to catch a subarray that leaves out the last element of the original array."
+      "You can use the same principles from the previous two lessons to destructure values from nested objects.",
+      "Using the object similar to previous examples:",
+      "const user = {",
+      "\t johnDoe: {",
+      " \t \t age:34,",
+      "email: 'johnDoe@freeCodeCamp.com'",
+      "}",
+      "};",
+      "Here's how to extract the values of object properties and assign them to variables with the same name:",
+      "const { johnDoe: {age, email}} = user;",
+      "And here's how you can assign object propeties' values to variables with different names:",
+      "const { johnDoe: {age:userAge; email: userEmail}} = user;"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Use destructuring assignment with the rest syntax to emulate the behaviour of Array.prototype.slice().removeFirstTwo() should return a sub-array of the original array list with the first two elements omitted.."
+          "Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values  of today.low and today.high  the LOCAL_FORECAST object."
         ],
         "placeholder": [
           "// Setup",
-          "function removeFirstTwo(list) {",
-          "\treturn list;",
-          "}",
-          "const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];",
-          "const sourceWithoutFirstTwo = removeFirstTwo(source);"
+          "const LOCAL_FORECAST = {",
+          " \t yesterday: { low: 61, high: 75 },",
+          "\t today : {low : 64, high: 77},",
+          "\t tomorrow: {low: 68, high: 80}",
+          "};",
+          "",
+          "// Only change code below this line",
+          "",
+          "const lowToday = LOCAL_FORECAST.today.low;",
+          "const highToday = LOCAL_FORECAST.today.high;",
+          "",
+          "//Only change code above this line"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      " removeFirstTwo([1, 2, 3, 4, 5]) should be [3, 4, 5]",
-      " removeFirstTwo() should not modify list",
-      " Array.slice() should not be used.",
-      " You should use the rest syntax"
+      " You should remove the ES5 assignment syntax.",
+      " You should use destructuring to create the lowToday variable.",
+      " You should use destructuring to create the highToday variable.",
+      "lowToday should be equal to 64 and highToday should be equal to 77."
     ]
   }
 ]

@@ -1,40 +1,52 @@
 [
   {
-    "title": "ES6 - Write Arrow Functions with Parameters",
+    "title": "ES6 - Prevent Object Mutation",
     "content": [
-      "Just like a regular function, you can pass arguments into an arrow function.",
-      "const doubler = (item) => item * 2;",
-      "doubler(4);",
-      "doubler(4) should return the value 8",
-      "If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.",
-      "const doubler = item => itme * 2;",
-      "It is possbile to pass more than one argument into an arrow function.",
-      "const multiplier = (item, multi) => item * multi;",
-      "multiplier(4, 2);",
-      "multiplier(4, 2) should return the value 8."
+      "As seen in the previos challenge, const declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation.",
+      "Any attempt at changing the object will be rejected, with an error thrown if the script is running in strict mode.",
+      "let obj = {",
+      "name: 'FreeCodeCamp',",
+      "review:'Awesome'",
+      "};",
+      "Object.freeze(obj);",
+      "obj.review = 'bad';",
+      "obj.newProp = 'Test';",
+      "console.log(obj);",
+      "The obj.review and obj.newProp assignments will result in errors, because our editor runs in strict mode by default, and the console will display the value {name:'FreeCodeCamp', review:'Awesome'}"
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
         "instruction": [
-          "Rewrite the function myConcat which appends contents of arr2 to arr1 so that the function uses arrow function syntax"
+          "In this challenge you are going to use Object.freeze to prevent mathematical constants from changing. You need to freeze the MATH_CONSTANTS object so that no one is able to alter the value of PI, add, or delete properties."
         ],
         "placeholder": [
           "// Setup",
-          "var myConcat = function (arr1, arr2){",
-          "\t return  arr1.concat(arr2);",
+          "function freezeObj() {",
+          "const MATH_CONSTANTS = {",
+          "PI : 3.14",
           "};",
-          "console.log(myConcat([1, 2], [3, 4, 5]));"
+          "// Only change code below this line",
+          "",
+          "// Only change code above this line",
+          "try {",
+          "MATH_CONSTANTS.PI = 99;",
+          "} catch (ex) {",
+          "console.log(ex);",
+          "}",
+          "return MATH_CONSTANTS.PI;",
+          "}",
+          "const PI = freezeObj();",
+          "console.log(PI);"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "You should replace the var keyword.",
-      "myConcat should be a constant variable( by using const).",
-      "myConcat should be an arrow function with two parameters",
-      "myConcat() should return [1, 2, 3, 4, 5]",
-      "The function keyword should not be used"
+      "you should not replace the const keyword.",
+      "MATH_CONSTANTS should be a constant variable(by using const).",
+      "You should not change the original declaration of MATH_CONSTANTS.",
+      "PI should equal 3.14"
     ]
   }
 ]

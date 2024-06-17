@@ -1,46 +1,36 @@
 [
   {
-    "title": "Use the Conditional (Ternary) Operator",
+    "title": "Use the parseInt Function",
     "content": [
-      "The conditional operator, also called the ternary operator, can be used as a one line if-else expression.",
-      "The syntax is  a ? b : c where a is the condition, b is the code to run when the condition returns true and c is the code to run when the condition returns false.",
-      "The following function use an if/else statement to check a condition:",
-      "function findGreater(a, b) {",
-      "if ( a > b) {",
-      "return 'a is greater';",
-      "}",
-      "else { ",
-      "return 'b is greater or equal';",
-      "}",
-      "}",
-      "This can be re-written using the conditional operator: ",
-      "function findGreater (a, b) {",
-      "return a > b ?'a is greater' : 'b is greater or equal';",
-      "}"
+      "The parseInt() function parses a string and returns an integer, Here's an example:",
+      "const  = parseInt('007')",
+      "The above function converts the string 007 to the integer 7. If the first character in the string can't be converted into a number, then it returns NaN."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": "Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either the string Equal or the string Not Equal.",
+        "instruction": "Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.",
         "placeholder": [
           "// Setup",
-          "function checkEqual(a, b) {",
+          "function convertToInteger(str) {",
           "",
           "//Only change code below this line",
           "",
           "//Only change code above this line",
           "",
           "}",
-          "checkEqual(1, 2);"
+          "convertToInteger('56')"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "checkEqual should use the conditional operator",
-      "checkEqual(1, 2) should return the string 'Not Equal'",
-      "checkEqual(1, 1) should return the string 'Equal'",
-      "checkEqual(1, -1) should return the string 'Not Equal'"
+      "convertToInteger should use the parseInt() function",
+      "convertToInteger('56') should return a number",
+      "convertToInteger('56') should return 56",
+      "convertToInteger('56') should return a number",
+      "convertToInteger('77') should return 77",
+      "convertToInteger('JamesBond') should return NaN"
     ]
   }
 ]

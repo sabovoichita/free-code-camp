@@ -1,45 +1,34 @@
 [
   {
-    "title": "Nesting For Loops",
+    "title": "Count Backwards With a For Loop",
     "content": [
-      "If you have a multi-dimensional array, you can use the same logic as prior waypoint to loop through both the arrays and any sub-array. Here is an example:",
-      "const arr = [",
-      "[1, 2], [3, 4], [5, 6]",
-      "];",
-      "our array.push(i);",
-      "];",
-      "for ( let i = 0; i < arr.length; i++) {",
-      "for (let j = 0; j < arr[i].length; j++) {",
-      "console.log(arr[i][j]);",
+      "A for loop can also count backwards, as long as we can define the right conditions ",
+      "In order to decrement by two each iteration, we'll need to change our initialization, condition, and final expression.",
+      "We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2;  ",
+      "const ourArray = [];",
+      "for (let i = 10; i> 0; i-=2 ) {",
+      "our Array.push(i);",
       "}",
-      "}",
-      "",
-      "This outputs each sub-element in arr one at a time. Note that for thw inner loop, we are checking the .length of arr[i] since arr[i] is itself an array "
+      "ourArray will now contain [10, 8, 6, 4, 2]. Let's change our initialization and final expression so that we can count backwards by twos to create an array of descending odd numbers."
     ],
     "eTitle": "Exercise",
     "exercises": [
       {
-        "instruction": "Modify function multiplyAll so that returns the product of all the numbers in the sub-arrays of arr.",
+        "instruction": "Push the odd numbers from 9 through 1 to myArray using a for loop",
         "placeholder": [
           "// Setup",
           "",
-          "function multiplyAll(arr){",
-          "let product = 1;",
-          "// Only change code below this line",
-          "",
-          "// Only change code above this line",
-          "return product;",
-          "}",
-          "",
-          "multiplyAll([[1, 2], [3, 4], [5, 6, 7]])"
+          "const myArray = []",
+          "// Only change code below this line"
         ]
       }
     ],
     "hint": [
       "Hint! ",
-      "multiplyAll([[1], [2], [3]]) should return 6",
-      "multiplyAll([[1,2], [3. 4]. [5, 6, 7]]) should return 5040",
-      "multiplyAll([[5, 1], [0.2, 4, 0.5], [3, 9]]) should return 54"
+      "You should be using a for loop for this",
+      "You should be using the array method push.",
+      "myArray should equal [9, 7, 5, 3, 1]",
+      ""
     ]
   }
 ]
