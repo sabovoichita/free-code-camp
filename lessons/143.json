@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Using the Test Method",
+    "content": [
+      "Regular expressions are named in programming languages to match parts of strings. You create patters to help you do that matching",
+      "If you want to find the word 'the' in the string 'The dog chased the cat', you couls use the following expression : /the/. Notice that quote marks are not required withing the regular expression",
+      "JavaScript has multiple ways to use regexes. One way to test a reges is using the .test() method. The .test() method takes the regex, applies it to a string(which is placed inside the parentheses), and returns true or false if the patern finds something or not.",
+      "let testStr = 'freeCodeCamp';",
+      "let testRegex = /Code/;",
+      "testRegex.test(testStr);",
+      "The test method returns true"
+    ],
+    "eTitle": "Exercise",
+    "exercises": [
+      {
+        "instruction": [
+          "Apply the reges myRegex on the string myString using the .test() method."
+        ],
+        "placeholder": [
+          "// Setup",
+          "let myString = 'Hello, World! ';",
+          "let myRegex = /Hello/;",
+          "let result =  //Change this line"
+        ]
+      }
+    ],
+    "hint": [
+      " Hint! ",
+      " You should use .test() to test the regex ",
+      " Your result should return true."
+    ]
+  }
+]

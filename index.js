@@ -79,6 +79,9 @@ function loadLesson(lessonNumber) {
       if (lessonNumber === 114) {
         writeChapter("Chapter 2: ES6", lessonNumber);
       }
+      if (lessonNumber === 143) {
+        writeChapter("Chapter 3: Regular Expressions", lessonNumber);
+      }
     })
     .catch((error) => {
       console.error(`Error loading lesson ${lessonNumber}:`, error);
@@ -100,7 +103,7 @@ function writeTitle() {
 }
 
 function initEvents() {
-  const numberOfLessons = 142;
+  const numberOfLessons = 143;
   renderDivs(numberOfLessons);
 
   writeTitle();
