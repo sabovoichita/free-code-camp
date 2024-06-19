@@ -5,14 +5,18 @@ function $(selector) {
 function renderDivs(lessonNumber) {
   const container = $("#container");
   for (let i = 1; i <= lessonNumber; i++) {
-    const div = document.createElement("div");
-    div.id = `l${i}`;
-    container.appendChild(div);
+    const lessonDiv = document.createElement("div");
+    lessonDiv.id = `l${i}`;
+    container.appendChild(lessonDiv);
   }
 }
 
 function showLesson(lessonNumber, lesson) {
   const spaceRender = $(`#l${lessonNumber}`);
+  if (!spaceRender) {
+    console.error(`Lesson #l${lessonNumber} not found.`);
+    return;
+  }
 
   const { title, content, eTitle, exercises, hint } = lesson;
 
@@ -39,16 +43,42 @@ function showLesson(lessonNumber, lesson) {
           .join(" ")}
           ${hint.map((h) => `<p>\b ${h}</p>`).join(" ")}
       </div>
-    </div>`;
+    </div>
+  `;
 
   spaceRender.innerHTML = lessonHTML;
+}
+
+function writeChapter(chapterContent, beforeLessonNumber) {
+  const lessonDiv = $(`#l${beforeLessonNumber}`);
+  if (!lessonDiv) {
+    console.error(`Element #l${beforeLessonNumber} not found.`);
+    return;
+  }
+  const chapterDiv = document.createElement("div");
+  chapterDiv.className = "chapter";
+  chapterDiv.innerHTML = `<h2>${chapterContent}</h2>`;
+  lessonDiv.parentNode.insertBefore(chapterDiv, lessonDiv);
 }
 
 function loadLesson(lessonNumber) {
   fetch(`lessons/${lessonNumber}.json`)
     .then((r) => r.json())
-    .then((lesson) => {
-      showLesson(lessonNumber, lesson[0]);
+    .then((lessonData) => {
+      // console.log(`Loaded lesson ${lessonNumber}:`, lessonData);
+      if (lessonData && lessonData.length > 0) {
+        showLesson(lessonNumber, lessonData[0]);
+      }
+
+      // Write "Chapter 1: Basic JavaScript" at the start
+      if (lessonNumber === 1) {
+        writeChapter("Chapter 1: Basic JavaScript", lessonNumber);
+      }
+
+      // Write "Chapter 2: ES6" after lesson 113
+      if (lessonNumber === 114) {
+        writeChapter("Chapter 2: ES6", lessonNumber);
+      }
     })
     .catch((error) => {
       console.error(`Error loading lesson ${lessonNumber}:`, error);
@@ -57,19 +87,25 @@ function loadLesson(lessonNumber) {
 
 function writeTitle() {
   const renderTitle = $("#container");
+  if (!renderTitle) {
+    console.error(`Container not found.`);
+    return;
+  }
   const titleDiv = document.createElement("div");
   titleDiv.id = "title";
   titleDiv.innerHTML = `
-  <h1>JavaScript Lessons</h1>
- `;
-  container.insertBefore(titleDiv, renderTitle.firstChild);
+    <h1>JavaScript Lessons</h1>
+  `;
+  renderTitle.insertBefore(titleDiv, renderTitle.firstChild);
 }
 
 function initEvents() {
   const numberOfLessons = 142;
   renderDivs(numberOfLessons);
+
   writeTitle();
 
+  // Load all lessons and insert chapters as needed
   for (let i = 1; i <= numberOfLessons; i++) {
     loadLesson(i);
   }
